@@ -7,6 +7,24 @@
   html {
     font-family: "Quicksand", sans-serif;
   }
+  h1 {
+    @apply text-6xl font-bold;
+  }
+  h2 {
+    @apply text-5xl font-bold;
+  }
+  h3 {
+    @apply text-4xl font-bold;
+  }
+  h4 {
+    @apply text-3xl font-bold;
+  }
+  h5 {
+    @apply text-2xl font-bold;
+  }
+  h6 {
+    @apply text-xl font-bold;
+  }
 }
 
 @layer components {
@@ -27,5 +45,8 @@
   }
   .burger-btn-line {
     @apply h-1 w-8 rounded-full bg-zinc-200;
+  }
+  .band-image {
+    @apply h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20;
   }
 }

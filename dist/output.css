@@ -416,6 +416,42 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
+h1{
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+h5{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h6{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -680,6 +716,20 @@ html {
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 
+.band-image{
+  height: 20rem;
+  width: 100%;
+  scroll-snap-align: center;
+  border-radius: 0.75rem;
+  background-size: cover;
+  background-position: center;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(0 0 0 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -690,6 +740,10 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.fixed{
+  position: fixed;
 }
 
 .absolute{
@@ -705,6 +759,14 @@ html {
   position: sticky;
 }
 
+.top-24{
+  top: 6rem;
+}
+
+.right-0{
+  right: 0px;
+}
+
 .top-0{
   top: 0px;
 }
@@ -717,9 +779,18 @@ html {
   top: 62px;
 }
 
+.z-50{
+  z-index: 50;
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ml-auto{
@@ -742,8 +813,24 @@ html {
   margin-top: 0.75rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .block{
   display: block;
+}
+
+.inline-block{
+  display: inline-block;
 }
 
 .flex{
@@ -786,6 +873,10 @@ html {
   min-height: 400px;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -796,6 +887,14 @@ html {
 
 .w-1{
   width: 0.25rem;
+}
+
+.min-w-\[80\%\]{
+  min-width: 80%;
+}
+
+.max-w-screen-lg{
+  max-width: 1024px;
 }
 
 .flex-1{
@@ -853,6 +952,10 @@ html {
   cursor: pointer;
 }
 
+.snap-x{
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -877,6 +980,14 @@ html {
   gap: 0.25rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
+.overflow-x-auto{
+  overflow-x: auto;
+}
+
 .rounded-xl{
   border-radius: 0.75rem;
 }
@@ -889,6 +1000,11 @@ html {
   border-radius: 0.125rem;
 }
 
+.rounded-l-lg{
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .border{
   border-width: 1px;
 }
@@ -899,6 +1015,16 @@ html {
 
 .border-white\/40{
   border-color: rgb(255 255 255 / 0.4);
+}
+
+.bg-zinc-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
 .bg-white\/30{
@@ -977,8 +1103,17 @@ html {
   padding-right: 1rem;
 }
 
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
 .text-center{
   text-align: center;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-2xl{
@@ -1012,6 +1147,11 @@ html {
 .text-sky-900{
   --tw-text-opacity: 1;
   color: rgb(12 74 110 / var(--tw-text-opacity));
+}
+
+.text-zinc-900{
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1127,6 +1267,34 @@ html {
   display: block;
 }
 
+.dark .dark\:inline{
+  display: inline;
+}
+
+.dark .dark\:hidden{
+  display: none;
+}
+
+.dark .dark\:bg-zinc-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-zinc-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:text-zinc-900{
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-zinc-200{
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px){
   .md\:flex{
     display: flex;
@@ -1134,5 +1302,9 @@ html {
 
   .md\:hidden{
     display: none;
+  }
+
+  .md\:min-w-\[40\%\]{
+    min-width: 40%;
   }
 }
