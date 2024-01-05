@@ -7,8 +7,84 @@
   <link href="../dist/output.css" rel="stylesheet" />
   <script defer src="./assets/fontawesome/js/solid.min.js"></script>
   <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+  <script>
+    window.onload = () => {
+      const burgerMenuBtn = document.getElementById('burger-menu-btn');
+      const ticketsMenuItem = document.getElementById('tickets-menu-item');
+      const toggleOpenClass = (elem) => {
+        const hasClassOpen = elem.classList.contains('open');
+        if (hasClassOpen) elem.classList.remove('open')
+        else elem.classList.add('open')
+      }
+      burgerMenuBtn.addEventListener('click', (e) => {
+        toggleOpenClass(burgerMenuBtn)
+      })
+
+      ticketsMenuItem.addEventListener('click', (e) => {
+        toggleOpenClass(ticketsMenuItem)
+      })
+    }
+  </script>
 </head>
 
-<body></body>
+<body>
+  <main>
+    <header class="text-zinc-200">
+      <nav class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500">
+        <a href="" class="flex items-center p-2 gap-2">
+          <img src="./assets/images/logo-inverted.png" alt="" width="50">
+          <span class="text-2xl font-bold ">
+            tw:<span class="text-sky-900">mf</span>
+          </span>
+        </a>
+        <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+          <div id="burger-menu-btn" class="group peer">
+            <div class="burger-btn-line group-open:rotate-45 transition-all group-open:top-2 top-0 relative"></div>
+            <div class="burger-btn-line mt-1 opacity-100 group-open:opacity-0 "></div>
+            <div class="burger-btn-line mt-1 group-open:-rotate-45 transition-all group-open:-top-2 top-0 relative"></div>
+          </div>
+          <nav class="peer-open:block hidden absolute w-full left-0 top-[62px] bg-gradient-to-r from-rose-500 to-pink-500">
+            <ul>
+              <li class="menu-item justify-center">
+                Home
+              </li>
+              <li class="menu-item justify-center">
+                Lineup
+              </li>
+              <li id="tickets-menu-item" class="menu-item p-0 flex-col items-center group">
+                <span class="p-4">Tickets</span>
+                <ul class="mobile-submenu text-center hidden group-open:block">
+                  <li class="mobile-submenu-item">Single day ticket</li>
+                  <li class="mobile-submenu-item">7 days ticket</li>
+                </ul>
+              </li>
+              <li class="menu-item justify-center">
+                Support
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="md:flex hidden flex-1 items-center justify-end">
+          <li class="menu-item">
+            Home
+          </li>
+          <li class="menu-item">
+            Lineup
+          </li>
+          <li class="menu-item group">
+            <span>Tickets</span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu-item">Single day ticket</li>
+              <li class="dropdown-menu-item">7 days ticket</li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            Support
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </main>
+</body>
 
 </html>
